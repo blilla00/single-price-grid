@@ -239,6 +239,13 @@ main {
     font-size: 1.2rem;
   }
 
+  .row-3 {
+    border-bottom-left-radius: 0;
+  }
+
+  .row-2 {
+    border-bottom-left-radius: .5em;
+  }
 
 }
 
