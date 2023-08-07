@@ -82,7 +82,6 @@ select {
     --bright-yellow: hsl(71, 73%, 54%);
     --light-gray: hsl(204, 43%, 93%);
     --gray-blue: hsl(218, 22%, 67%);
-    --lighter-cyan: hsl(179, 62%, 43%);
 }
 
 body {
@@ -100,7 +99,7 @@ main {
     grid-template-columns: 22rem;
     grid-template-rows: repeat(3, 16em);
     max-width: 22rem;
-    border-radius: 4rem;
+    
 }
 
 /* styles for the first row of the mobile layout */
@@ -111,6 +110,8 @@ main {
   flex-direction: column;
   justify-content: space-between;
   padding: 1.5em;
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
 }
 
 .row-1 h2 {
@@ -131,8 +132,7 @@ main {
 /* styles for the second row */
 
 .row-2 {
-  border: 1px solid black;
-  background-color: var(--lighter-cyan);
+  background-color: var(--cyan);
   color: white;
   padding: 1.5em;
   display: flex;
@@ -169,18 +169,21 @@ main {
 
 .row-2 button {
   background-color: var(--bright-yellow);
-  border-radius: .2em;
+  border-radius: .4em;
   padding: 1rem 0;
   color: white;
   font-size: 1.2rem;
   /* has a small box shadow */
+  box-shadow: 0 1rem 1rem -.2rem var();
+  border: none;
 }
 
 .row-3 {
-  border: 1px solid black;
   background-color: var(--cyan);
   color: white;
   padding: 1.5em;
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius: .5em;
 }
 
 .row-3 h2 {
@@ -197,9 +200,21 @@ main {
   opacity: 90%;
 }
 
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  padding: 1em;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
  /* The following styles are for desktop width < 450pxish */
 
-@media only screen and (min-width: 29rem) {
+@media only screen and (min-width: 51rem) {
   
   main {
     max-width: 50rem;
@@ -209,6 +224,19 @@ main {
 
   .row-1 {  
     grid-column: 1 /3;
+    padding: 3em;
+  }
+
+  .row-1 h2 {
+    font-size: 2rem;
+  }
+
+  .row-1 h3 {
+    font-size: 1.5rem;
+  }
+
+  .row-1 p {
+    font-size: 1.2rem;
   }
 
 
